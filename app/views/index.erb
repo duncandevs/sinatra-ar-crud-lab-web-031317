@@ -1,0 +1,15 @@
+    <!-- Create the get '/posts' controller action. This action should use Active Record to grab all of the posts and store them in an instance variable, @posts. Then, it should render the index.erb view. That view should use erb to iterate over @posts and render them on the page. -->
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+      </head>
+      <body>
+        <%@posts.each do |post| %>
+          <h1><%=post.name %></h1>
+          <p><%=post.content%></p>
+        <%end%>
+      </body>
+    </html>

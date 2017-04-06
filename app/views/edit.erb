@@ -1,0 +1,20 @@
+<!-- The Update CRUD action corresponds to the edit controller action and view.
+Create a controller action, get '/posts/:id/edit', that renders the view, edit.erb. This view should contain a form to update a specific blog post and POSTs to a controller action, patch '/posts/:id'. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post" action="/posts/<%=@post.id%>" >
+      <input id="hidden" type="hidden" name="_method" value="patch" />
+      <label>Name</label>
+      <input type="text" name="name" value="<%=@post.name%>">
+      <label>Content</label>
+      <input type="text" name="content" value="<%=@post.content%>">
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+</html>

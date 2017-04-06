@@ -1,0 +1,17 @@
+<!-- Create the get '/posts/:id' controller action. This action should use Active Record to grab the post with the id that is in the params and set it equal to @post. Then, it should render the show.erb view page. That view should use erb to render the @post's title and content. -->
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+   </head>
+   <body>
+     <h1><%=@post.name%></h1>
+     <p><%=@post.content%></p>
+       <form action="/posts/<%=@post.id%>/delete" method="post">
+         <input id = "hidden"  type="hidden" name="_method" value="delete"/>
+         <input type="submit" name="delete" value="delete"/>
+       </form>
+   </body>
+ </html>
